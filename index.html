@@ -77,6 +77,7 @@
     <br><br>
 
     <button onclick="calculateTip()">Calculate</button>
+    <div id="tip_result"></div>
     <div id="result"></div>
   </div>
   <script>
@@ -92,9 +93,8 @@
       const tip = (bill * tipPercentage) / 100;
       const total = bill + tip;
 
-      document.getElementById('result').innerHTML =
-        `Tip Amount: Rs.${tip.toFixed(2)} <br>
-        Total Amount: Rs.${total.toFixed(2)}`;
+      document.getElementById("tip_result").innerHTML = `Tip Amount : ${tip.toFixed(2)}`;
+      document.getElementById('result').innerHTML = `Total Amount: Rs.${total.toFixed(2)}`;
     }
   </script>
 </body>
